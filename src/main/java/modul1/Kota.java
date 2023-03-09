@@ -14,7 +14,7 @@ public class Kota <E>{
     public static void main(String[] args) {
         Kota<Integer> jumlahkota = new Kota<>(9);
         Kota<String> namakota = new Kota<>(" Malang");
-        System.out.println("Jumlah kota di jawa timur : "+jumlahkota.getElement()+" kota");
+        System.out.println("Jumlah kota di    jawa timur : "+jumlahkota.getElement()+" kota");
         System.out.println("Salah satu kota di jawa timur : kota"+namakota.getElement());
     }
 }
