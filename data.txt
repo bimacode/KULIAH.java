@@ -1,0 +1,2 @@
+Nomor: [12, 34, 56, 78]
+String: [as, sd, fg, fhj, cf]

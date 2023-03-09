@@ -1,0 +1,235 @@
+package UAS;
+
+import javax.swing.JOptionPane;
+
+public class KalkulatorKonversiSuhuGUI extends javax.swing.JFrame {
+    double angkakesatu,tocel,tofar,tokel,torea;
+    double angkakedua;
+    double hasil;
+    String operasi;
+    int btnTitikClick;
+    public KalkulatorKonversiSuhuGUI() {
+        initComponents();
+    }
+
+    private void satuActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ satu.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void duaActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ dua.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void tigaActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ tiga.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void empatActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ empat.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void limaActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ lima.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void enamActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ enam.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void tujuhActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ tujuh.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void delapanActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ delapan.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void sembilanActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ sembilan.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void tambahActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        angkakesatu = Double.parseDouble(jtxtTampilan.getText());
+        jtxtTampilan.setText("");
+        operasi="+";
+        btnTitikClick=0;
+    }
+
+    private void nolActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        String MasukanAngka = jtxtTampilan.getText()+ nol.getText();
+        jtxtTampilan.setText(MasukanAngka);
+    }
+
+    private void kurangActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        angkakesatu = Double.parseDouble(jtxtTampilan.getText());
+        jtxtTampilan.setText("");
+        operasi="-";
+        btnTitikClick=0;
+    }
+
+    private void kaliActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        angkakesatu = Double.parseDouble(jtxtTampilan.getText());
+        jtxtTampilan.setText("");
+        operasi="*";
+        btnTitikClick=0;
+    }
+
+    private void bagiActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        angkakesatu = Double.parseDouble(jtxtTampilan.getText());
+        jtxtTampilan.setText("");
+        operasi="/";
+        btnTitikClick=0;
+    }
+
+    private void lebihkurangActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        double ops = Double.parseDouble(String.valueOf(jtxtTampilan.getText()));
+        ops = ops *(-1);
+        jtxtTampilan.setText(String.valueOf(ops));
+        btnTitikClick=0;
+    }
+
+    private void btnTitikActionPerformed(java.awt.event.ActionEvent evt) {
+        // TODO add your handling code here:
+        if (btnTitikClick==0) {
+            jtxtTampilan.setText(jtxtTampilan.getText()+ btnTitik.getText());
+            btnTitikClick=1;
+        }
+
+        private void clearActionPerformed(java.awt.event.ActionEvent evt) {
+            // TODO add your handling code here:
+            jtxtTampilan.setText("");
+            btnTitikClick=0;
+            jtxtcel.setText("");
+            jtxtfah.setText("");
+            jtxtkel.setText("");
+            jtxtrea.setText("");
+        }
+
+        private void samadenganActionPerformed(java.awt.event.ActionEvent evt) {
+            // TODO add your handling code here:
+            String answer;
+            angkakedua =Double.parseDouble(jtxtTampilan.getText());
+            if (operasi =="+") {
+                hasil = angkakesatu + angkakedua;
+                answer = String.format(" %,.2f ", hasil);
+                jtxtTampilan.setText(answer);
+
+            } else if (operasi =="-") {
+                hasil = angkakesatu - angkakedua;
+                answer = String.format("%,.2f", hasil);
+                jtxtTampilan.setText(answer);
+            } else if (operasi =="*") {
+                hasil = angkakesatu * angkakedua;
+                answer = String.format("%,.2f", hasil);
+                jtxtTampilan.setText(answer);
+            } else if (operasi =="/") {
+                hasil = angkakesatu / angkakedua;
+                answer = String.format("%,.2f", hasil);
+                jtxtTampilan.setText(answer);
+            } else if (operasi =="%") {
+                hasil = angkakesatu % angkakedua;
+                answer = String.format("%,.2f", hasil);
+                jtxtTampilan.setText(answer);
+            }
+        }
+
+        private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
+            // TODO add your handling code here:
+            String konvert = String.valueOf(jcsuhu.getSelectedItem());
+            String answer;
+
+            angkakesatu = Double.parseDouble(jtxtTampilan.getText());
+            if (konvert == "CELCIUS") {
+                hasil=angkakesatu;
+                answer=String.format(" %,.2f ", hasil);
+                jtxtcel.setText(answer);
+                tofar=angkakesatu*1.8+32;
+                answer=String.format(" %,.2f ", tofar);
+                jtxtfah.setText(answer);
+                tokel=angkakesatu + 273.15;
+                answer=String.format(" %,.2f ", tokel);
+                jtxtkel.setText(answer);
+                torea=angkakesatu*0.8;
+                answer=String.format(" %,.2f ", torea);
+                jtxtrea.setText(answer);
+            } else if (konvert == "FAHRENHEIT") {
+                hasil=angkakesatu;
+                answer=String.format(" %,.2f ", hasil);
+                jtxtfah.setText(answer);
+                tocel=(angkakesatu-32)/1.8;
+                answer=String.format(" %,.2f ", tocel);
+                jtxtcel.setText(answer);
+                tokel=(angkakesatu + 459.67)/1.8;
+                answer=String.format(" %,.2f ", tokel);
+                jtxtkel.setText(answer);
+                torea=(angkakesatu-32)/2.25;
+                answer=String.format(" %,.2f ", torea);
+                jtxtrea.setText(answer);
+            } else if (konvert == "KELVIN") {
+                hasil=angkakesatu;
+                answer=String.format(" %,.2f ", hasil);
+                jtxtkel.setText(answer);
+                tocel=angkakesatu-273.15;
+                answer=String.format(" %,.2f ", tocel);
+                jtxtcel.setText(answer);
+                tofar=(angkakesatu *1.8)-459.67;
+                answer=String.format(" %,.2f ", tofar);
+                jtxtfah.setText(answer);
+                torea=(angkakesatu-273.15)*0.8;
+                answer=String.format(" %,.2f ", torea);
+                jtxtrea.setText(answer);
+            } else if (konvert == "REAMUR") {
+                hasil=angkakesatu;
+                answer=String.format(" %,.2f ", hasil);
+                jtxtrea.setText(answer);
+                tocel=angkakesatu/0.8;
+                answer=String.format(" %,.2f ", tocel);
+                jtxtcel.setText(answer);
+                tofar=(angkakesatu *2.25)+32;
+                answer=String.format(" %,.2f ", tofar);
+                jtxtfah.setText(answer);
+                tokel=(angkakesatu/0.8)+237.15;
+                answer=String.format(" %,.2f ", tokel);
+                jtxtkel.setText(answer);
+            }
+        }
+
+        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
+// TODO add your handling code here:
+            jPanel4.setVisible(false);
+        }
+
+        private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+// TODO add your handling code here:
+
+            jPanel4.setVisible(true);
+        }
+
+        private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+// TODO add your handling code here:
+            JOptionPane.showMessageDialog(null, " Created by Karjono");
+        }
