@@ -4,33 +4,46 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Mahasiswa {
-    String nama,kelas,matkulPraktikum ;
+    String nama, kelas, matkulPraktikum;
     int nim;
 
-    public Mahasiswa(String nm, String kl,String mat, int ni){
+    public Mahasiswa(String nm, String kl, String mat, int ni) {
         nama = nm;
-        kelas=kl;
-        matkulPraktikum= mat;
+        kelas = kl;
+        matkulPraktikum = mat;
         nim = ni;
     }
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        HashMap<String,Mahasiswa> mhs = new HashMap<>();
+        HashMap<String, Mahasiswa> mhs = new HashMap<>();
         String input;
-        Mahasiswa data ;
+        Mahasiswa data;
+        boolean lanjut = true;
+        mhs.put("1", new Mahasiswa("Putri", "3H", "Struktur Data", 2020000));
+        mhs.put("2", new Mahasiswa("Agus", "3A", "Matematika", 2020012));
+        mhs.put("3", new Mahasiswa("Arro", "3D", "Pemrograman", 2020017));
 
-        mhs.put("1",new Mahasiswa("Putri","3H","Struktur Data",2020000));
-        mhs.put("2",new Mahasiswa("Agus","3A","Matematika",2020012));
-        mhs.put("3",new Mahasiswa("Arro","3D","Pemrograman",2020017));
+        while (lanjut) {
+            System.out.print("Masukkan ID: ");
+            input = in.nextLine();
+            data = mhs.get(input);
+            if (data != null) {
+                System.out.println("Data Mahasiswa \t: " + data.nama + "\n" + "Kelas \t\t\t: " + data.kelas
+                        + "\n" + "Mata Kuliah \t: " + data.matkulPraktikum + "\n" + "Nim \t\t\t: " + data.nim);
+            } else {
+                System.out.println("ID tidak ditemukan.");
+            }
 
-        System.out.println("Masukan ID: ");
-        input=in.nextLine();
-        data= mhs.get(input);
-        if (data != null){
-            System.out.println("Data Mahasiswa : "+ data.nama + ", Kelas"+data.kelas+
-                    ", Mata Kuliah : "+data.matkulPraktikum + ", Nim : "+data.nim);
+            System.out.println();
+            System.out.print("Apakah Anda ingin melanjutkan program? (y/n) ");
+            String jawaban = in.nextLine();
+            if (jawaban.equalsIgnoreCase("n")) {
+                lanjut = false;
+                System.out.println("Program telah ditutup.");
+            }
         }
+
 
     }
 }
