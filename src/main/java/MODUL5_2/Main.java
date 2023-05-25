@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         BinaryTree pohon = new BinaryTree();
 
+
         pohon.NewNode(20);
         pohon.NewNode(2);
         pohon.NewNode(25);

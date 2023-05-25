@@ -25,6 +25,7 @@ public class BinaryTree {
             System.out.println(node.data + " ");
             inOrder(node.right);
         }
+
     }
     public void preOrder(Node node) {
         if (node != null) {
