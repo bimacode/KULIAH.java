@@ -34,6 +34,7 @@ public class DFSTraversal {
     public static void main(String[] args) {
         DFSTraversal graph = new DFSTraversal(8);
 
+
         graph.insertEdge(0,1);
         graph.insertEdge(0,2);
         graph.insertEdge(0,3);
