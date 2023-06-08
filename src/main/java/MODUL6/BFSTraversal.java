@@ -38,6 +38,7 @@ public class BFSTraversal {
         }
     }
 
+
     public static void main(String[] args) {
         BFSTraversal graph = new BFSTraversal(6);
         graph.insertEdge(0,1);
